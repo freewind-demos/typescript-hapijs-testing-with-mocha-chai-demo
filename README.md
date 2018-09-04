@@ -1,13 +1,13 @@
-NodeJS Hello World Demo
-=======================
+JavaScript Backend Hello World Demo
+===================================
 
 ```
-brew install nodejs
-node hello.js
+npm install
+npm run demo
 ```
 
 It will print:
 
 ```
-Hello, NodeJS
+Hello, Javascript
 ```
