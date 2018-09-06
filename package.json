@@ -1,8 +1,8 @@
 {
   "scripts": {
-    "demo": "node hello.js"
+    "demo": "node server.js"
   },
   "dependencies": {
-    "lodash": "^4.17.10"
+    "hapi": "^17.5.4"
   }
 }
