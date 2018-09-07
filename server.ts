@@ -1,4 +1,5 @@
 import * as Hapi from 'hapi'
+import * as Joi from 'Joi'
 import {Request, ResponseToolkit} from 'hapi'
 
 const server = new Hapi.Server({
@@ -7,14 +8,29 @@ const server = new Hapi.Server({
 })
 
 server.route({
-    method: 'GET',
+    method: 'POST',
     path: '/hello',
     handler: function (request: Request, h: ResponseToolkit) {
-        return 'hello world'
+        const payload = request.payload as { name: string }
+        return `Hello, ${payload.name}!`
+    },
+    options: {
+        validate: {
+            payload: {
+                name: Joi.string().required().min(3)
+            }
+        }
     }
-});
+})
 
-(async () => {
+
+async function startServer() {
     await server.start()
     console.log('Server running at:', server.info.uri)
-})()
+}
+
+if (!module.parent) {
+    startServer()
+}
+
+export default server

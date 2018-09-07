@@ -1,12 +1,17 @@
 {
   "scripts": {
-    "demo": "ts-node server.ts"
+    "test": "mocha -r ts-node/register *-test.ts"
   },
   "dependencies": {
     "hapi": "^17.5.4"
   },
   "devDependencies": {
+    "@types/chai": "^4.1.4",
     "@types/hapi": "^17.0.19",
+    "@types/mocha": "^5.2.5",
+    "chai": "^4.1.2",
+    "chai-http": "^4.2.0",
+    "mocha": "^5.2.0",
     "ts-node": "^7.0.1",
     "typescript": "^3.0.3"
   }
