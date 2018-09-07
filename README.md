@@ -1,4 +1,4 @@
-JavaScript HapiJS Server Demo
+TypeScript HapiJS Server Demo
 =============================
 
 使用[HapiJS](https://hapijs.com/)来创建一个NodeJS server.
